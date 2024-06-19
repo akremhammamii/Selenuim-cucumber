@@ -19,14 +19,24 @@ public class LoginPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	private static WebElement btnLogin;
 	
-	@FindBy(how = How.TAG_NAME, using = "h1")
+	@FindBy(how = How.XPATH, using = " //*[contains(text(), 'Dashboard')]") // change me
 	private static WebElement text;
+	
+	@FindBy(how = How.XPATH, using = "//a[normalize-space()='Logout']")
+	private static WebElement btnLogout;
+	
+	@FindBy(how = How.XPATH, using = "")
+	private static WebElement titlePage;
 
 	public LoginPage() {
-		super(Setup.getDriver());
+		super(Setup.getDriver());	
 	}
 
 	/* Create method getter */
+	public static WebElement getBtnLogout() {
+		return btnLogout;
+	}
+	
 	public static WebElement getEmail() {
 		return email;
 	}
