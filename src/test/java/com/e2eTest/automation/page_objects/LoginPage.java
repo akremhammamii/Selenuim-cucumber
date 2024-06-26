@@ -19,13 +19,13 @@ public class LoginPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	private static WebElement btnLogin;
 	
-	@FindBy(how = How.XPATH, using = " //*[contains(text(), 'Dashboard')]") // change me
+	@FindBy(how = How.XPATH, using = " //body/div/div/div[1]/h1[1]") // change me
 	private static WebElement text;
 	
 	@FindBy(how = How.XPATH, using = "//a[normalize-space()='Logout']")
 	private static WebElement btnLogout;
 	
-	@FindBy(how = How.XPATH, using = "")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"main\"]/div/div/div/div[1]/h1")
 	private static WebElement titlePage;
 
 	public LoginPage() {
